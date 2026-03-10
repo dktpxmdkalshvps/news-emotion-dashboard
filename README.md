@@ -78,6 +78,7 @@ output/
 logs/
 └── app.log                                  # 실행 로그
 ```
+<img width="2844" height="1857" alt="image" src="https://github.com/user-attachments/assets/403e84d7-4bda-4cc8-899e-6edd71d1744b" />
 
 ---
 
