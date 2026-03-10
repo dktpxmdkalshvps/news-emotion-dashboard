@@ -1,17 +1,28 @@
-# 뉴스 감성 분석 대시보드 (News Sentiment Insight Dashboard) 요구사항
+# News Sentiment Insight Dashboard v3.0 - 의존성 패키지
 # 설치: pip install -r requirements.txt
 
-# 데이터 처리
+# ── 데이터 처리 ────────────────────────────────────────────────
 pandas>=2.0.0
 numpy>=1.24.0
 
-# 크롤링
+# ── 크롤링 ─────────────────────────────────────────────────────
 selenium>=4.15.0
-webdriver-manager>=4.0.0
+webdriver-manager>=4.0.0       # Chrome 드라이버 자동 관리
 
-# 시각화
+# ── 시각화 (PNG 대시보드) ───────────────────────────────────────
 matplotlib>=3.7.0
 seaborn>=0.12.0
+wordcloud>=1.9.0               # pip install wordcloud
 
-# 엑셀 처리
+# ── 웹 대시보드 ─────────────────────────────────────────────────
+streamlit>=1.30.0              # pip install streamlit
+plotly>=5.18.0                 # pip install plotly
+
+# ── 엑셀 내보내기 ───────────────────────────────────────────────
 openpyxl>=3.1.0
+
+# ── ML 감성 분석 (KoBERT) - 선택사항 ───────────────────────────
+# pip install transformers torch
+# 권장 모델: snunlp/KR-FinBert-SC (금융 뉴스 특화)
+# 대안 모델: hun3359/klue-bert-base-sentiment
+#            monologg/koelectra-base-finetuned-sentiment
